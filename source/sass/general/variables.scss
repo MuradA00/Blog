@@ -1,0 +1,72 @@
+:root {
+    /* -- Fonts --*/
+  --primary-ff: 'Roboto', sans-serif;
+  --sec-ff: 'Inter', sans-serif;
+  // * -- Color -- * //
+  --accent-clr: #4CB649;
+  --dark-clr: #22252E;
+  --white-clr: #fff;
+  --border-clr: #EBECED;
+  --red-clr: #F24458;
+  --orange-clr: #FF8D00;
+  --bg-gradient: linear-gradient(135deg, #3D4251 0%, #272B35 100%);
+  --btn-gradient: linear-gradient(0deg, #4CB649 0%, #5DDF5A 100%);
+  --grey-clr: #889099;
+  // * -- Spacing -- * //
+  --30-spacing: 1.875rem;
+  --15-spacing: 0.9375rem;
+  --news-block-spacing: 4.6875rem;
+
+}
+
+._container {
+  max-width: 78.1rem;
+  margin-inline: auto;
+  padding: 0 1.5625rem;
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 0.6875rem clamp(.9375rem, 3vw, var(--30-spacing));
+  border-radius: var(--30-spacing);
+  max-width: 100%;
+  font-size: .875rem;
+}
+
+._btn-green {
+  background: var(--btn-gradient);
+  color: var(--white-clr);
+  transition: all .3s linear;
+  &:hover {
+    background: var(--white-clr);
+    color: var(--accent-clr);
+    outline: 1px solid var(--accent-clr);
+  }
+}
+
+._btn-white {
+  background: var(--white-clr);
+  color: var(--accent-clr);
+  outline: 1px solid var(--accent-clr);
+  transition: all .3s linear;
+  &:hover {
+    background: var(--btn-gradient);
+    color: var(--white-clr);
+    outline: none;
+  }
+}
+
+._hidden {
+  display: none;
+
+}
+
+
+
+
+
