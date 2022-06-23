@@ -1,0 +1,106 @@
+.footer {
+  &__container {
+    padding: 0 20px;
+  }
+  &__body {
+    padding: clamp(2.75rem, 5.3125vw, 5.3125rem) 0 clamp(3.0625rem, 5.625vw, 5.625rem);
+  }
+  &__logo {
+    font-size: clamp(1.125rem, 1.6875vw, 1.6875rem);
+  }
+  &__inner {
+    padding-top: 3.4375rem;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    grid-gap: clamp(2.5rem, 4.125vw, 4.125rem);
+  }
+  .footer-list {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3.5rem;
+    &__item:nth-child(1) {
+      grid-row: span 2;
+    }
+    &__item:last-child {
+      display: none;
+    }
+    &__heading {
+      font-weight: 500;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 1rem;
+      padding-top: 1.25rem;
+    }
+    &__inner-link {
+      color:
+      rgba(136, 144, 153, 1);
+      font-size: 0.875rem;
+    }
+  }
+  &__about-info {
+    padding-top: 1.25rem;
+    p {
+      line-height: 150%;
+    }
+  }
+  &__rights {
+    padding-top: 12px;
+    p {
+      font-size: .75rem;
+      color: rgba(136, 144, 153, 1);
+    }
+  }
+  &__social {
+    padding-top: 2.5rem;
+  }
+  .social-list {
+    padding-top: 1.5625rem;
+    display: flex;
+    align-items: center;
+    grid-gap: 1.875rem;
+    &__item {
+      transition: transform .25s ease-in-out;
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+    }
+  }
+
+}
+
+@include max-w(43.75rem) {
+  .footer {
+    &__inner {
+      grid-template-columns: 100%;
+    }
+    .footer-list {
+      row-gap: 2.1875rem;
+      grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    }
+    &__social {
+      display: none;
+    }
+    .footer-list {
+      &__item:last-child {
+        display: block !important;
+      }
+    }
+    .mob-social {
+      padding-top: 1.5rem;
+      display: flex;
+      grid-gap: 1.4375rem;
+      align-items: center;
+      flex-wrap: wrap;
+      &__item {
+        flex: 0 0 20%;
+      }
+    }
+  }
+}

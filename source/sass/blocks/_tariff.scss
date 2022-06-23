@@ -25,6 +25,9 @@
       align-items: center;
       justify-content: center;
       padding: 3rem 1rem 2.5rem;
+      &:nth-child(2) {
+        border: 4px solid var(--accent-clr);
+      }
     }
     &__item-btn {
       margin-top: var(--30-spacing);
@@ -62,6 +65,12 @@
     &__item-btn {
       max-width: 12.8125rem;
       width: 100%;
+      @include max-w(45.625rem) {
+        &:hover {
+          background: rgba(255, 141, 0, 1) !important;
+          outline: 1px solid rgba(255, 141, 0, 1);
+        }
+      }
     }
     &__item-name {
       font-size: 0.875rem;
@@ -138,9 +147,12 @@
 }
 
 ._active-tarif-item {
-  border: 4px solid var(--accent-clr) !important;
+  border: 4px solid var(--accent-clr);
   min-height: 23.75rem;
   height: 100%;
+  @include max-w(45.625rem) {
+    border: 4px solid rgba(255, 141, 0, 1) !important;
+  }
 }
 
 @include max-w(31.25rem) {

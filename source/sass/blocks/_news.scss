@@ -20,8 +20,22 @@
       grid-template-columns: 0.85fr 1.3fr;
       grid-gap: clamp(1.25rem, 2.5vw, 2.5rem);
     }
+    &__heading {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     &__bottom-info {
       padding-top: 1rem;
+    }
+    &__image {
+      overflow: hidden;
+      &:hover img{
+        transform: scale(1.08);
+      }
+    }
+    &__image img {
+      transition: .3s ease-out;
     }
   }
   &__column {
@@ -143,6 +157,9 @@
 }
 
 @include max-w(45.625rem) {
+  ._active-tarif-item {
+    min-height: 100% !important;
+  }
   .desktop-ver {
     display: none;
   }

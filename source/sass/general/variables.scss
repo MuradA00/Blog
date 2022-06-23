@@ -67,6 +67,15 @@
 }
 
 
+.--body-locked {
+  overflow: hidden;
+}
 
+.--menu-opened {
+  &::before {
+    transition: all .3s linear;
+    opacity: 1;
+    visibility: visible;
+  }
 
-
+}
